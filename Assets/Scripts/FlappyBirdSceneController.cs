@@ -14,6 +14,7 @@ namespace ProgrammingBatch.FlappyBirdClone.Core
         [SerializeField] private IntroUIComponent introUIComponent = default;
         [SerializeField] private RestartButtonComponent restartButtonComponent = default;
         [SerializeField] private FireButtonComponent fireButtonComponent = default;
+        [SerializeField] private SoundComponent soundComponent = default;
 
         public override void InitializeCoreModules()
         {
@@ -41,6 +42,10 @@ namespace ProgrammingBatch.FlappyBirdClone.Core
             introUIComponent.OnInitialized(_gameStateHandler);
             restartButtonComponent.OnInitialize(_gameStateHandler);
             fireButtonComponent.OnInitialize(_gameStateHandler);
+
+            soundComponent.SetDeadSound(_gameStateHandler);
+            soundComponent.SetScoreSound(_scoreHandler);
+            soundComponent.SetTapSound(_tapHandler);
 
             _gameStateHandler.StateChanged(GameEnum.Idle);
         }
