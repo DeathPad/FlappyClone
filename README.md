@@ -1,5 +1,5 @@
 # FlappyClone
-Selamat datang pada FLAPPY CLONE!
+Selamat datang pada FLAPPY CLONE! Unity 2019.2.5f1
 
 Sebelum masuk kepada project ini, terdapat beberapa hal yang perlu diketahui
 - SceneController, base class yang menjadi awal dari seluruh script yang terdapat pada scene.
